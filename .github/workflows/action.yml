@@ -27,6 +27,7 @@ jobs:
 
     - name: Build the Docker image
       run: docker build -t quay.io/suriyariya5920/suriya-app:v1 .  
+      working-directory: session4\Dockerfile
 
     - name: Push Docker image to Quay.io
       run: docker push quay.io/suriyariya5920/suriya-app:v1 

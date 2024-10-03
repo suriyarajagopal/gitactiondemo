@@ -19,7 +19,8 @@ jobs:
     
       
     - name: Log in to Quay.io
-      run: echo "${{ secrets.QUAY_PASSWORD }}" | docker login quay.io -u "${{ secrets.QUAY_USERNAME }}" --password-stdin
+      run: echo "${{ secrets.QUAY_PASSWORD }}" 
+           docker login quay.io -u "${{ secrets.QUAY_USERNAME }}" 
 
 
     - name: Build the Docker image

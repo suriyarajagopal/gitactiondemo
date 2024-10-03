@@ -19,8 +19,7 @@ jobs:
     
       
     - name: Log in to Quay.io
-      run: echo "${{ secrets.QUAY_PASSWORD }}" | docker login quay.io -u "${{ secrets.QUAY_USERNAME }}" 
-
+      run: echo "${{ secrets.QUAY_PASSWORD }}" | docker login quay.io -u "${{ secrets.QUAY_USERNAME }}" --password-stdin
 
     - name: Build the Docker image
       run: docker build -t quay.io/suriyariya5920/suriya-app:v1 .  
